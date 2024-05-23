@@ -23,11 +23,11 @@ const AppLayout = () => {
         background="#2E2C5D"
         speed={4}
       />
-      <Navbar className="relative z-10" />
+      <Navbar className="relative " />
       <div className="relative w-full h-full">
         <Outlet/>
       </div>
-      <Footer className="relative z-10" />
+      <Footer className="relative " />
     </div>
   );
 };

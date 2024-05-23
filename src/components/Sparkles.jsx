@@ -53,7 +53,7 @@ const SparklesCore = (props) => {
             },
             fullScreen: {
               enable: false,
-              zIndex: 1,
+              zIndex: 0,
             },
             fpsLimit: 120,
             interactivity: {
