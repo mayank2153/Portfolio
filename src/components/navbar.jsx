@@ -65,7 +65,7 @@ const Navbar = () => {
         <Link to="/" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Home</Link>
         <Link to="/projects" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Projects</Link>
         <Link to="/contact" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-        <a href="https://drive.google.com/file/d/1g2PsfcW-VO3kdpvtYiUEduf3OqWt_mci/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="block md:inline md:border md:border-white md:rounded-md md:p-2 md:hover:bg-gray-800 md:hover:border-gray-800 hover:text-gray-300 p-4 resume-button" onClick={() => setIsMenuOpen(false)}>Resume</a>
+        <a href="https://drive.google.com/file/d/1grIL7OwTNstsDBFlCjxiLoKSFwRV-041/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="block md:inline md:border md:border-white md:rounded-md md:p-2 md:hover:bg-gray-800 md:hover:border-gray-800 hover:text-gray-300 p-4 resume-button" onClick={() => setIsMenuOpen(false)}>Resume</a>
       </div>
     </nav>
   );
