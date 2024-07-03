@@ -9,7 +9,7 @@ const ChangingText = () => {
         'Student',
         'Tech Enthusiast',
         'Coder',
-        'Full stack Web Developer',
+        'Full Stack Web Developer',
       ],
       loop: true,
       typeSpeed: 100,
