@@ -1,7 +1,9 @@
 import React from 'react';
 import CravingsCart from "../assets/images/CravingsCart.png";
 import ProjectCard from './ProjectCard';
-
+import WhisperHub from '../assets/images/whisperHub.jpg'
+import paytm from "../assets/images/paytm.avif"
+import weather from "../assets/images/weather.png"
 const Projects = () => {
   return (
     <div className='md:flex py-10 md:mt-[190px] md:h-[63vh] mt-[80px]'>
@@ -16,9 +18,9 @@ const Projects = () => {
           <ProjectCard
             name="Whisper Hub"
             description="A Social Media App"
-            imageLink={CravingsCart}
-            liveLink="https://cravingscart.web.app/"
-            Github="https://github.com/mayank2153/Cravings-Cart"
+            imageLink={WhisperHub}
+            liveLink=""
+            Github="https://github.com/mayank2153/WhisperHub"
           />
         </div>
       </div>
@@ -38,7 +40,7 @@ const Projects = () => {
             <ProjectCard
               name="Paytm Clone"
               description="A payment App"
-              imageLink={CravingsCart}
+              imageLink={paytm}
               liveLink="https://paytm-clone-blond.vercel.app"
               Github="https://github.com/mayank2153/Paytm-Clone"
             />
@@ -47,7 +49,7 @@ const Projects = () => {
             <ProjectCard
               name="Weather App"
               description="A Weather App"
-              imageLink={CravingsCart}
+              imageLink={weather}
               liveLink="https://weather-app-xi-five-70.vercel.app/"
               Github="https://github.com/mayank2153/Weather-App"
             />
