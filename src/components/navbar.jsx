@@ -38,6 +38,11 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  // Toggle menu visibility
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className={`navbar flex items-center justify-between text-white h-16 px-10 fixed top-0 w-full transition-all duration-500 z-20 ${scrolling ? 'backdrop-blur-lg bg-opacity-50' : 'bg-transparent'}`}>
       {/* Logo */}
@@ -46,7 +51,7 @@ const Navbar = () => {
       {/* Hamburger Menu Icon */}
       <div className="md:hidden flex items-center">
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
           className="focus:outline-none"
         >
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -56,12 +61,11 @@ const Navbar = () => {
       </div>
 
       {/* Menu items */}
-      <div ref={menuRef} className={`absolute md:static top-16 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} md:opacity-100 md:pointer-events-auto md:flex gap-10`}>
-        <Link to="/" className="block md:inline hover:text-gray-300 p-4 md:p-0">Home</Link>
-        <a href="#about" className="block md:inline hover:text-gray-300 p-4 md:p-0">About</a>
-        <Link to="/projects" className="block md:inline hover:text-gray-300 p-4 md:p-0">Projects</Link>
-        <a href="#contact" className="block md:inline hover:text-gray-300 p-4 md:p-0">Contact</a>
-        <a href="https://drive.google.com/file/d/1g2PsfcW-VO3kdpvtYiUEduf3OqWt_mci/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="block md:inline md:border md:border-white md:rounded-md md:p-2 md:hover:bg-gray-800 md:hover:border-gray-800 hover:text-gray-300 p-4  resume-button">Resume</a>
+      <div ref={menuRef} className={`absolute md:static top-16 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent transition-opacity duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} md:opacity-100 md:pointer-events-auto md:flex gap-10 md:items-center`}>
+        <Link to="/" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Home</Link>
+        <Link to="/projects" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+        <Link to="/contact" className="block md:inline hover:text-gray-300 p-4 md:p-0" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+        <a href="https://drive.google.com/file/d/1g2PsfcW-VO3kdpvtYiUEduf3OqWt_mci/view?usp=sharing" target='_blank' rel="noopener noreferrer" className="block md:inline md:border md:border-white md:rounded-md md:p-2 md:hover:bg-gray-800 md:hover:border-gray-800 hover:text-gray-300 p-4 resume-button" onClick={() => setIsMenuOpen(false)}>Resume</a>
       </div>
     </nav>
   );

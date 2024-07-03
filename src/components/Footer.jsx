@@ -5,7 +5,7 @@ import twitter from "../assets/images/twitterIcon.svg";
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col md:flex-row justify-around bg-gray-900 py-8 items-center text-white w-full mt-auto z-10'>
+    <footer className='flex flex-col md:flex-row justify-around bg-gray-900 py-8 items-center text-white w-full mt-auto '>
       <p>Designed and Developed by Mayank Sachdeva</p>
       <p>Copyright © 2024 Mayank Sachdeva</p>
       <div className='flex gap-4'>

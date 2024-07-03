@@ -12,7 +12,7 @@ import {
 import Projects from './components/Projects.jsx';
 import Navbar from './components/navbar.jsx';
 import Footer from './components/Footer.jsx';
-
+import Contact from './components/Contact.jsx';
 const AppLayout = () => {
   return (
     <div className="relative w-full h-full min-w-screen overflow-hidden">
@@ -27,7 +27,7 @@ const AppLayout = () => {
       <div className="relative w-full h-full">
         <Outlet/>
       </div>
-      <Footer className="relative " />
+      <Footer className="relative z-1 " />
     </div>
   );
 };
@@ -44,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />
+      },
+      {
+        path: "contact",
+        element: <Contact />
       }
     ]
   }

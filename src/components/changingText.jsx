@@ -7,10 +7,9 @@ const ChangingText = () => {
     const typeData = new Typed('.role', {
       strings: [
         'Student',
-        'Reader',
         'Tech Enthusiast',
         'Coder',
-        'Web Developer',
+        'Full stack Web Developer',
       ],
       loop: true,
       typeSpeed: 100,

@@ -6,14 +6,15 @@ import github from "../assets/images/githubIcon.svg";
 import linkedin from "../assets/images/linkedinIcon.svg";
 import twitter from "../assets/images/twitterIcon.svg";
 import { CardContainer, CardBody, CardItem } from './3dCard.tsx';
+import LottieAnimation from './LottieAnimation.jsx';
 
 const LandingPage = () => {
   return (
-    <div className='md:h-[100vh] py-20 px-10 md:py-40 md:px-20 h-[90vh] mt-20'>
+    <div className='md:h-[100vh] py-20 px-10 md:py-30 md:px-20 h-[90vh] mt-20'>
       <div className='flex flex-col md:flex-row justify-between items-center mb-14 gap-8 md:gap-[25px]'>
         <div className='min-w-full md:min-w-[600px]'>
           <h1 className='text-white text-4xl md:text-6xl mb-4 whitespace-nowrap'>Hey There</h1>
-          <div className='flex text-3xl md:text-6xl items-center gap-2'>
+          <div className='flex text-2xl md:text-6xl items-center gap-2'>
             <h1 className='text-white'>I'm</h1>
             <h1 className='text-textpink font-bold'>Mayank Sachdeva </h1>
           </div>
@@ -42,7 +43,7 @@ const LandingPage = () => {
           </div>
         </HoverBorderGradient>
       </div>
-      
+      <LottieAnimation />
     </div>
   );
 };
