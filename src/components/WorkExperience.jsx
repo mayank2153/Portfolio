@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useOnScreen } from '../hooks/useOnScreen.js'; // Import the hook
 
 const WorkExperience = () => {
+  const experienceRef = useRef(); // Create a reference for the component
+  const isVisible = useOnScreen(experienceRef); // Use the hook
+
   const experiences = [
     {
       company: 'Antim Pravakta Media',
@@ -17,7 +21,11 @@ const WorkExperience = () => {
   ];
 
   return (
-    <section id="experience" className="text-white p-10 bg-[#0a192f] mb-16">
+    <section
+      ref={experienceRef}
+      id="experience"
+      className={`text-white px-10 py-20 bg-[#0a192f] mb-20 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`} // Apply dynamic opacity
+    >
       <h2 className="text-xl md:text-3xl font-semibold mb-8 text-teal-400">
         Work Experience
       </h2>

@@ -24,7 +24,7 @@ const LandingPage = () => {
         
       </div>
 
-      <div className='lg:m-0 flex justify-center pt-12'>
+      <div className='lg:m-0 flex justify-center md:pt-12'>
         <HoverBorderGradient className="hover-border-gradient ">
           <div className='flex gap-4'>
             <a href="https://github.com/mayank2153" target="_blank"><img src={github} alt="Github" className='w-[40px] h-[40px]' /></a>
