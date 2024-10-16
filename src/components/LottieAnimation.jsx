@@ -13,7 +13,7 @@ const LottieAnimation = () => {
   };
 
   return (
-    <div className='pt-200 md:pt-0'>
+    <div className='pt-200 md:pt-0 hidden md:block'>
       <Lottie options={defaultOptions} height={100} width={100} />
     </div>
   );
