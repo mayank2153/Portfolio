@@ -1,63 +1,53 @@
-import React from 'react';
-import CravingsCart from "../assets/images/CravingsCart.png";
-import ProjectCard from './ProjectCard';
-import WhisperHub from '../assets/images/whisperHub.jpg'
-import paytm from "../assets/images/paytm.avif"
-import weather from "../assets/images/weather.png"
+import React from "react";
+import ProjectComponent from "./ProjectCard.jsx";
 const Projects = () => {
+  const projectData = [
+    {
+      imageSrc: "https://res.cloudinary.com/dhrbg2jbi/image/upload/c_fill,ar_16:9/v1728997638/Screenshot_2024-10-15_183620_g7v4dr.png",
+      projectName: "inSocial",
+      description: `inSocial: Anonymous messaging app with React frontend and Node.js backend. Features secure posts, real-time chat via WebSockets, and live notifications. Privacy-focused design for engaging, worry-free social interaction.`,
+      technologies: ["Node js", "Express", "React js", "Tailwind CSS", "WebSockets", "MongoDB", "Google Gemini"],
+      github: "https://github.com/mayank2153/inSocial",
+      live: "https://insocial.tech"
+    },
+    {
+      imageSrc: "https://res.cloudinary.com/dhrbg2jbi/image/upload/v1729080223/Screenshot_2024-10-16_173245_hvh6zr.png",
+      projectName:  "Cravings Cart",
+      description:  "Cravings Cart is a food ordering platform designed to provide users with real-time restaurant listings and a seamless food ordering experience. Users can browse restaurants powered by the Swiggy API and easily add, remove, or modify items in their shopping cart. The app enables efficient navigation between pages using React Router DOM, ensuring a smooth and intuitive user journey.",
+      description:  "Cravings Cart is a food ordering platform designed to provide users with real-time restaurant listings and a seamless food ordering experience. Users can browse restaurants powered by the Swiggy API and easily add, remove, or modify items in their shopping cart. The app enables efficient navigation between pages using React Router DOM, ensuring a smooth and intuitive user journey.",
+      technologies: ["React.js", "Redux", "React Router DOM", "TailwindCSS"],
+      github: "https://github.com/mayank2153/Cravings-Cart",
+      live: "https://cravingscart.web.app/"
+    }
+  ]
+
   return (
-    <div className='md:flex py-10 md:mt-[190px] md:h-[63vh] mt-[80px]'>
-      <div className='md:w-[30%] flex flex-col justify-center items-center border-r-2'>
-        <h1 className='text-4xl text-white font-bold'>
-          Currently
-        </h1>
-        <h1 className='text-4xl text-white font-bold'>
-          Working On
-        </h1>
-        <div className='w-full'>
-          <ProjectCard
-            name="Whisper Hub"
-            description="A Social Media App"
-            imageLink={WhisperHub}
-            liveLink=""
-            Github="https://github.com/mayank2153/WhisperHub"
-          />
-        </div>
-      </div>
-      <div className='md:w-[70%] flex flex-col justify-center items-center'>
-        <h1 className='text-4xl text-white font-bold'>Past Projects</h1>
-        <div className='flex flex-col md:flex-row justify-between mx-5 md:mx-20 gap-10 md:gap-10 pt-8 w-full'>
-          <div className='w-full'>
-            <ProjectCard
-              name="Cravings Cart"
-              description="A Food App"
-              imageLink={CravingsCart}
-              liveLink="https://cravingscart.web.app/"
-              Github="https://github.com/mayank2153/Cravings-Cart"
+    <section id="experience" className="text-white p-10 bg-[#0a192f] mb-16">
+      {/* <ProjectComponent
+        imageSrc={projectData.imageSrc}
+        projectName={projectData.projectName}
+        description={projectData.description}
+        technologies={projectData.technologies}
+      /> */}
+      <h2 className="text-xl md:text-3xl font-semibold mb-8 text-teal-400">
+        Projects
+      </h2>
+      {
+        projectData.map((d)=>{
+          return(
+            <ProjectComponent 
+            imageSrc={d.imageSrc}
+            projectName={d.projectName}
+            description={d.description}
+            technologies={d.technologies}
+            github={d.github}
+            live={d.live}
             />
-          </div>
-          <div className='w-full'>
-            <ProjectCard
-              name="Paytm Clone"
-              description="A payment App"
-              imageLink={paytm}
-              liveLink="https://paytm-clone-blond.vercel.app"
-              Github="https://github.com/mayank2153/Paytm-Clone"
-            />
-          </div>
-          <div className='w-full'>
-            <ProjectCard
-              name="Weather App"
-              description="A Weather App"
-              imageLink={weather}
-              liveLink="https://weather-app-xi-five-70.vercel.app/"
-              Github="https://github.com/mayank2153/Weather-App"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+          )
+        })
+      }
+    </section>
   );
-}
+};
 
 export default Projects;

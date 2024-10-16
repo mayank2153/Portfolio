@@ -1,50 +1,74 @@
-import React from 'react';
-import { CardContainer, CardBody, CardItem } from './3dCard.tsx';
+import React from "react";
+import { FiGithub } from "react-icons/fi";
+import { FiLink2 } from "react-icons/fi";
 
-const ProjectCard = ({ name, description, imageLink, liveLink, Github }) => {
+const FeaturedProjectComponent = ({
+  imageSrc,
+  projectName,
+  description,
+  technologies,
+  github,
+  live,
+}) => {
   return (
-    <div className='w-full md:w-auto px-10'>
-      <CardContainer className="inter-var w-full md:w-[250px] h-full">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border">
-          <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-            {name}
-          </CardItem>
-          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-            {description}
-          </CardItem>
-          <CardItem translateZ="100" className="w-full mt-4">
-            <img
-              src={imageLink}
-              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="thumbnail"
-            />
-          </CardItem>
-          <div className="flex justify-between items-center mt-4">
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-            >
-              Project Link
-            </CardItem>
-            <CardItem
-              translateZ={20}
-              as="a"
-              href={Github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-            >
-              Github
-            </CardItem>
+    <div className="text-white px-6 rounded-lg shadow-lg py-14">
+      <div className="relative">
+        <div className="w-full">
+          <img
+            src={imageSrc || "/api/placeholder/800/400"}
+            alt={projectName}
+            className="rounded-lg h-[300px] object-cover blur-sm md:blur-0  md:grayscale-0 md:filter brightness-7 sepia-2 hue-rotate-190 saturate-15 hover:brightness-100 md:hover:filter-none hover:sepia-0 hover:hue-rotate-0 transition-all duration-300"// Custom bluish filter
+          />
+        </div>
+        <div className="absolute top-4 right-4 flex flex-col items-end">
+          <h3 className="text-xl font-semibold mb-2 md:text-teal-400">
+            {projectName}
+          </h3>
+          <div className="bg-[#112240] text-white md:text-gray-300 text-lg py-6 px-4 min-h-[300px] md:min-h-[100px] rounded-lg mb-4 max-w-[350px] bg-opacity-5 md:bg-opacity-100">
+            <p className="text-sm">{description}</p>
+            <div className="flex flex-wrap gap-2 md:hidden justify-end mb-4 max-w-[250px]">
+            {technologies.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-gray-700 px-2 py-1 rounded-md text-xs"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
-        </CardBody>
-      </CardContainer>
+          </div>
+          <div className=" flex-wrap gap-2 hidden md:flex justify-end mb-4 max-w-[250px]">
+            {technologies.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-gray-700 px-2 py-1 rounded-md text-xs"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            <a
+              href={github}
+              target="_blank"
+              className="text-gray-400 hover:text-white"
+              rel="noopener noreferrer"
+            >
+              <FiGithub />
+            </a>
+            <a
+              href={live}
+              target="_blank"
+              className="text-gray-400 hover:text-white"
+              rel="noopener noreferrer"
+            >
+              <FiLink2 />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default ProjectCard;
+export default FeaturedProjectComponent;

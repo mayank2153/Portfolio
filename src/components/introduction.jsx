@@ -3,7 +3,7 @@ import React from 'react';
 const Introduction = () => {
   return (
     <div className='h-screen flex flex-col justify-center items-center text-white px-8 py-4 md:p-0'>
-      <h1 className='text-4xl md:text-6xl'>LET ME <span className='text-textpink'>INTRODUCE</span> MYSELF</h1>
+      <h1 className='text-4xl md:text-6xl'>LET ME <span className='text-[#69f8dc]'>INTRODUCE</span> MYSELF</h1>
       <ul className='mt-8 text-md md:text-xl text-left list-disc'>
         <li className="mb-6">Fourth-year undergraduate student at KCC Institute of Technology and Management, Greater Noida, on a thrilling journey in Computer Science and Engineering.</li>
         <li className="mb-6">Thrives on the art of coding with a colorful palette of programming languages.</li>

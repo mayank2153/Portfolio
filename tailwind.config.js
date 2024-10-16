@@ -1,4 +1,5 @@
 // Import flattenColorPalette at the top
+const { HiUpload } = require('react-icons/hi');
 const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
 
@@ -22,6 +23,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      sepia:{
+        2:"0.3"
+      },
+      brightness:{
+        7:"0.7"
+      },
+      hueRotate:{
+        190:"190deg"
+      },
+      saturate:{
+        15:"1.5"
+      },
       colors: {
         bgblue: "#2E2C5D",
         lightblue: "#45DBB7",

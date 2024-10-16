@@ -13,28 +13,18 @@ const LandingPage = () => {
     <div className='md:h-[100vh] py-20 px-10 md:py-30 md:px-20 h-[90vh] mt-20'>
       <div className='flex flex-col md:flex-row justify-between items-center mb-14 gap-8 md:gap-[25px]'>
         <div className='min-w-full md:min-w-[600px]'>
-          <h1 className='text-white text-4xl md:text-6xl mb-4 whitespace-nowrap'>Hey There</h1>
-          <div className='flex text-2xl md:text-6xl items-center gap-2'>
-            <h1 className='text-white'>I'm</h1>
-            <h1 className='text-textpink font-bold'>Mayank Sachdeva </h1>
+          <h1 className='text-white text-xl md:text-3 xl mb-4 whitespace-nowrap'>Hey There</h1>
+          <div className='text-2xl md:text-6xl items-center gap-2 text-[#e1e8f0]'>
+            <h1 className='font-bold'>I'm Mayank Sachdeva </h1>
+            <h1 className='font-bold text-[#8691ad] mt-4'>I build things for the web.</h1>
           </div>
-          <ChangingText />
+          <p className='text-[#8691ad] text-lg mt-4'>I’m a full-stack developer based in India, passionate about turning concepts into fully realized web applications. Whether you're starting a new project or upgrading an existing one, I’ll help shape your vision with clean, structured, and efficient code.</p>
+          
         </div>
-        <div className='hidden lg:block w-full md:w-auto'>
-          <CardContainer className="inter-var w-full md:w-[400px] h-[200px]">
-            <CardBody className="">
-              <CardItem
-                translateZ="20"
-                className="text-xl font-bold text-neutral-600 dark:text-white h-[450px] w-full md:w-[350px]"
-              >
-                <img src={profile} alt="profile" />
-              </CardItem>
-            </CardBody>
-          </CardContainer>
-        </div>
+        
       </div>
 
-      <div className='lg:m-0 flex justify-center mt-5'>
+      <div className='lg:m-0 flex justify-center pt-12'>
         <HoverBorderGradient className="hover-border-gradient ">
           <div className='flex gap-4'>
             <a href="https://github.com/mayank2153" target="_blank"><img src={github} alt="Github" className='w-[40px] h-[40px]' /></a>

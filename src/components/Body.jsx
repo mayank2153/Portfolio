@@ -8,10 +8,8 @@ import Footer from './Footer.jsx';
 const Body = () => {
   return (
     <div className='w-full'>
-      <TracingBeam className='h-full'>
+
         <LandingPage />
-        <Introduction />
-      </TracingBeam>
     </div>
   );
 }

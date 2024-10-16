@@ -41,7 +41,7 @@ export function HoverBorderGradient({
   };
 
   const highlight =
-    "radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)";
+    "radial-gradient(75% 181.15942028985506% at 50% 50%, #69f8dc 0%, rgba(255, 255, 255, 0) 100%)";
 
   useEffect(() => {
     if (!hovered) {
@@ -90,7 +90,7 @@ export function HoverBorderGradient({
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
-      <div className="bg-green absolute z-1 flex-none inset-[2px] rounded-[100px]" />
+      <div className=" absolute z-1 flex-none inset-[2px] rounded-[100px]" />
     </Tag>
   );
 }
