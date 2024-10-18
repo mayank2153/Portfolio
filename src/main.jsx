@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import './index.css';
-
+import { Analytics } from "@vercel/analytics/react"
 import {
   createBrowserRouter,
   Outlet,
@@ -16,9 +16,10 @@ import TracingBeam from './components/tracingbeam.jsx';
 const AppLayout = () => {
   return (
     <div className="relative w-full h-full min-w-screen overflow-hidden      bg-[#0a1930]">
-
+      <Analytics />
       <Navbar className="relative " />
       <div className="relative w-full h-full">
+
         <App />
       </div>
       <Footer className="relative z-1 " />
